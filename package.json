@@ -1,0 +1,15 @@
+{
+  "name": "debouncing-buttons",
+  "version": "1.0.0",
+  "description": "A possible solution, when you want to avoid firing some event, but have no control of it.",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server -f -w"
+  },
+  "keywords": [],
+  "author": "Dmytro-Andrii Kostelnyi",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.10"
+  }
+}
