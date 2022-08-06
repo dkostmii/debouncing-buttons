@@ -2,6 +2,22 @@
 
 A possible solution, when you want to avoid firing some event, but have no control of it.
 
+## How to run
+
+1. Install deps:
+
+    ```bash
+    npm install
+    ```
+
+2. Run the project:
+
+    ```bash
+    npm run start
+    ```
+
+## Concept
+
 The core of this project is:
 
 ```JavaScript
@@ -13,13 +29,13 @@ const blockerFn = e => {
 window.addEventListener(evtType, blockerFn, true);
 ```
 
-Which stops event of specified type from propagating across whole DOM. This may broke some stuff on your page, if you didn't constrain the blocker. So for that let's remove the handler if we don't need it:
+Which stops event of specified type from propagating across whole DOM. This may break some stuff on your page, if you didn't constrain the blocker. So for that let's remove the handler if we don't need it:
 
 ```JavaScript
 window.removeEventListener(evtType, blockerFn, true);
 ```
 
-This logic is composed inside two functions: `setEventBlocker(evtType)` and `removeEventBlocker(evtType)`
+This logic is composed inside two functions: `setEventBlocker(evtType)` and `removeEventBlocker(evtType, blockerFn)`
 
 Finally, every input element, which suffers from that event, can block it:
 
